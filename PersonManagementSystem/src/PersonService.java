@@ -77,7 +77,7 @@ public class PersonService {
 	
 	public static void searchByName() {
 		System.out.print("\nEnter name: ");
-		String name = sc.next();
+		String name = sc.nextLine();
 		for(int i=0;i<cnt;i++) {
 			if(perarr[i].getPname().equals(name)) {
 				System.out.println(perarr[i]);
