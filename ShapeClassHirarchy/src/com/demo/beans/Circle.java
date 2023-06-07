@@ -1,14 +1,14 @@
 package com.demo.beans;
 
-public class Circle {
+public class Circle extends Shape {
 	private int rad;
 
 	public Circle() {
 		super();
 	}
 
-	public Circle(int rad) {
-		super();
+	public Circle(String c,int rad) {
+		super(c);
 		this.rad = rad;
 	}
 
@@ -22,7 +22,7 @@ public class Circle {
 
 	@Override
 	public String toString() {
-		return "Circle [rad=" + rad + "]";
+		return super.toString()+"Circle [rad=" + rad + "]";
 	}
 	
 	public float calcArea() {

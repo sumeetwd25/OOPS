@@ -1,6 +1,6 @@
 package com.demo.beans;
 
-public class Triangle {
+public class Triangle extends Shape {
 	private int base;
 	private int height;
 	private int s1;
@@ -10,8 +10,8 @@ public class Triangle {
 		super();
 	}
 
-	public Triangle(int base, int height, int s1, int s2) {
-		super();
+	public Triangle(String c,int base, int height, int s1, int s2) {
+		super(c);
 		this.base = base;
 		this.height = height;
 		this.s1 = s1;
@@ -52,7 +52,7 @@ public class Triangle {
 
 	@Override
 	public String toString() {
-		return "Triangle [base=" + base + ", height=" + height + ", s1=" + s1 + ", s2=" + s2 + "]";
+		return super.toString()+"Triangle [base=" + base + ", height=" + height + ", s1=" + s1 + ", s2=" + s2 + "]";
 	}
 	
 	public float calcArea() {

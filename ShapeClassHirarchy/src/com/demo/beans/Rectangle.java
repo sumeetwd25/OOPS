@@ -1,11 +1,17 @@
 package com.demo.beans;
 
-public class Rectangle {
+public class Rectangle extends Shape {
 	private int base;
 	private int height;
 	
 	public Rectangle() {
 		super();
+	}
+
+	public Rectangle(String c, int base, int height) {
+		super(c);
+		this.base = base;
+		this.height = height;
 	}
 
 	public int getBase() {
@@ -26,7 +32,7 @@ public class Rectangle {
 
 	@Override
 	public String toString() {
-		return "Rectangle [base=" + base + ", height=" + height + "]";
+		return super.toString()+"Rectangle [base=" + base + ", height=" + height + "]";
 	}
 	
 	public float calcArea() {
