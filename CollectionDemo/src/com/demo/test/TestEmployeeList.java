@@ -59,7 +59,7 @@ public class TestEmployeeList {
 				System.out.println("Invalid choice");
 				break;
 			}
-		}while(choice!=4);
+		}while(choice!=5);
 		sc.close();
 	}
 
