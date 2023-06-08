@@ -15,6 +15,23 @@ public class Employee {
 		this.desg = desg;
 		this.sal = sal;
 	}
+
+//	public Employee(int eid) {
+//		super();
+//		this.eid = eid;
+//		this.ename = null;
+//		this.desg = null;
+//		this.sal = 0;
+//	}
+
+	public Employee(String ename) {
+		super();
+		this.eid = 0;
+		this.ename = ename;
+		this.desg = null;
+		this.sal = 0;	
+	}
+	
 	public int getEid() {
 		return eid;
 	}

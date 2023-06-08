@@ -23,4 +23,23 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		return elist;
 	}
 
+	@Override
+	public Employee findById(int id) {
+		for(int i=0;i<elist.size();i++) {
+			if(elist.get(i).getEid()==id) {
+				return elist.get(i);
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Employee findByName(String name) {
+		int pos = elist.indexOf(new Employee(name));
+		if(pos!=-1) {
+			return elist.get(pos);
+		}
+		return null;
+	}
+
 }

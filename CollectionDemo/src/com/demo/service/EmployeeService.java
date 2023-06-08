@@ -7,4 +7,8 @@ public interface EmployeeService {
 	void addNewEmployee();
 	
 	List<Employee> displayAll();
+
+	Employee searchById(int id);
+
+	Employee searchByName(String name);
 }

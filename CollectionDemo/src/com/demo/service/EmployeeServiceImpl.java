@@ -35,4 +35,9 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return edao.getAllEmployee();
 	}
 
+	@Override
+	public Employee searchById(int id) {
+		return edao.findById(id);
+	}
+
 }

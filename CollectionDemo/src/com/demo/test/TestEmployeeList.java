@@ -2,9 +2,9 @@ package com.demo.test;
 
 import java.util.List;
 import java.util.Scanner;
+import com.demo.beans.Employee;
 import com.demo.service.EmployeeService;
 import com.demo.service.EmployeeServiceImpl;
-import com.demo.beans.Employee;
 
 public class TestEmployeeList {
 
@@ -14,7 +14,7 @@ public class TestEmployeeList {
 		
 		int choice = 0;
 		do {
-			System.out.println("\n1.Add new employee\n2.Display all employee\n3.Exit");
+			System.out.println("\n1.Add new employee\n2.Display all employee\n3.Display by id\n4.Exit");
 			System.out.print("Enter choice: ");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -26,8 +26,20 @@ public class TestEmployeeList {
 				List <Employee> list = es.displayAll();
 				list.forEach(ob->{System.out.println(ob);});
 				break;
-			
+				
 			case 3:
+				System.out.print("Enter employee id: ");
+				int id = sc.nextInt();
+				Employee e = es.searchById(id);
+				if(e!=null) {
+					System.out.println(e);
+				}
+				else {
+					System.out.println("Not found");
+				}
+				break;
+				
+			case 4:
 				System.out.println("Thankyou for visiting!");
 				break;
 				
@@ -35,7 +47,7 @@ public class TestEmployeeList {
 				System.out.println("Invalid choice");
 				break;
 			}
-		}while(choice!=3);
+		}while(choice!=4);
 		sc.close();
 	}
 
