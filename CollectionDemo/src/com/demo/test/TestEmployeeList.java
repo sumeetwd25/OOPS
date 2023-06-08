@@ -14,7 +14,7 @@ public class TestEmployeeList {
 		
 		int choice = 0;
 		do {
-			System.out.println("\n1.Add new employee\n2.Display all employee\n3.Display by id\n4.Exit");
+			System.out.println("\n1.Add new employee\n2.Display all employee\n3.Display by id\n4.Display by name\n5.Exit");
 			System.out.print("Enter choice: ");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -40,6 +40,18 @@ public class TestEmployeeList {
 				break;
 				
 			case 4:
+				System.out.print("Enter employee name: ");
+				String name = sc.next();
+				e = es.searchByName(name);
+				if(e!=null) {
+					System.out.println(e);
+				}
+				else {
+					System.out.println("Not found");
+				}
+				break;
+				
+			case 5:
 				System.out.println("Thankyou for visiting!");
 				break;
 				

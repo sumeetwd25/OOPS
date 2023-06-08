@@ -35,9 +35,10 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
 	public Employee findByName(String name) {
-		int pos = elist.indexOf(new Employee(name));
-		if(pos!=-1) {
-			return elist.get(pos);
+		for(int i=0;i<elist.size();i++) {
+			if(elist.get(i).getEname().equals(name)) {
+				return elist.get(i);
+			}
 		}
 		return null;
 	}

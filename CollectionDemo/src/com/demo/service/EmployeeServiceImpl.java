@@ -40,4 +40,9 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return edao.findById(id);
 	}
 
+	@Override
+	public Employee searchByName(String name) {
+		return edao.findByName(name);
+	}
+
 }

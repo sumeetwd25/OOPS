@@ -24,13 +24,13 @@ public class Employee {
 //		this.sal = 0;
 //	}
 
-	public Employee(String ename) {
-		super();
-		this.eid = 0;
-		this.ename = ename;
-		this.desg = null;
-		this.sal = 0;	
-	}
+//	public Employee(String ename) {
+//		super();
+//		this.eid = 0;
+//		this.ename = ename;
+//		this.desg = null;
+//		this.sal = 0;	
+//	}
 	
 	public int getEid() {
 		return eid;
