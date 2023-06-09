@@ -15,4 +15,8 @@ public interface EmployeeService {
 	List<Employee> sortBySal();
 
 	List<Employee> sortByName();
+
+	boolean modifyById(int id, int newsal);
+
+	boolean deleteById(int id);
 }

@@ -15,4 +15,8 @@ public interface EmployeeDao {
 	List<Employee> sortBySalary();
 
 	List<Employee> sortByName();
+
+	boolean updateById(int id, int newsal);
+
+	boolean removeById(int id);
 }

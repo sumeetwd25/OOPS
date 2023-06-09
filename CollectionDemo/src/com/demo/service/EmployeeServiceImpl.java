@@ -55,4 +55,14 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return edao.sortByName();
 	}
 
+	@Override
+	public boolean modifyById(int id, int newsal) {
+		return edao.updateById(id,newsal);
+	}
+
+	@Override
+	public boolean deleteById(int id) {
+		return edao.removeById(id);
+	}
+
 }

@@ -17,7 +17,7 @@ public class Employee implements Comparable<Employee>{
 		this.desg = desg;
 		this.sal = sal;
 	}
-	
+
 	public int getEid() {
 		return eid;
 	}
@@ -50,7 +50,6 @@ public class Employee implements Comparable<Employee>{
 	
 	public int compareTo(Employee o) {
 		return this.sal-o.sal;
-		
 	}
 	
 }

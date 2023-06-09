@@ -68,4 +68,25 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		return newlist;
 	}
 
+	@Override
+	public boolean updateById(int id, int newsal) {
+		Employee e = findById(id);
+		if(e!=null) {
+			e.setSal(newsal);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean removeById(int id) {
+		for(int i=0;i<elist.size();i++) {
+			if(elist.get(i).getEid()==id) {
+				elist.remove(i);
+				return true;
+			}
+		}
+		return false;
+	}
+
 }
