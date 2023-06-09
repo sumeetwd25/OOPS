@@ -2,6 +2,8 @@ package com.demo.dao;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Comparator;
+
 import com.demo.beans.Employee;
 
 public class EmployeeDaoImpl implements EmployeeDao{
@@ -9,8 +11,8 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	static {
 		elist = new ArrayList<>();
 		elist.add(new Employee(1,"xxx","game designer",100000));
-		elist.add(new Employee(2,"yyy","ux designer",50000));
-		elist.add(new Employee(3,"zzz","analyst",80000));
+		elist.add(new Employee(2,"zzz","ux designer",50000));
+		elist.add(new Employee(3,"yyy","analyst",80000));
 	}
 
 	@Override
@@ -41,6 +43,29 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public List<Employee> sortBySalary() {
+		List<Employee> newlist = new ArrayList<>();
+		for(Employee e : elist) {
+			newlist.add(e);
+		}
+		newlist.sort(null);
+		return newlist;
+	}
+
+	@Override
+	public List<Employee> sortByName() {
+		List<Employee> newlist = new ArrayList<>();
+		for(Employee e : elist) {
+			newlist.add(e);
+		}
+		Comparator <Employee> c =(o1,o2)->{
+			return o1.getEname().compareTo(o2.getEname());
+		};
+		newlist.sort(c);
+		return newlist;
 	}
 
 }

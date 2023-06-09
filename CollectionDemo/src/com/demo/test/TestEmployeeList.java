@@ -14,7 +14,7 @@ public class TestEmployeeList {
 		
 		int choice = 0;
 		do {
-			System.out.println("\n1.Add new employee\n2.Display all employee\n3.Display by id\n4.Display by name\n5.Exit");
+			System.out.println("\n1.Add new employee\n2.Display all employee\n3.Display by id\n4.Display by name\n5.Sort by salary\n6.Sort by name\n7.Exit");
 			System.out.print("Enter choice: ");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -52,14 +52,27 @@ public class TestEmployeeList {
 				break;
 				
 			case 5:
+				List <Employee> list2= es.sortBySal();
+				list2.forEach(a->{
+					System.out.println(a);
+				});
+				break;
+				
+			case 6:
+				list2 = es.sortByName();
+				list2.forEach(a->{
+					System.out.println(a);
+				});
+				break;
+				
+			case 7:
 				System.out.println("Thankyou for visiting!");
 				break;
 				
 			default:
 				System.out.println("Invalid choice");
-				break;
 			}
-		}while(choice!=5);
+		}while(choice!=7);
 		sc.close();
 	}
 

@@ -45,4 +45,14 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return edao.findByName(name);
 	}
 
+	@Override
+	public List<Employee> sortBySal() {
+		return edao.sortBySalary();
+	}
+
+	@Override
+	public List<Employee> sortByName() {
+		return edao.sortByName();
+	}
+
 }

@@ -11,4 +11,8 @@ public interface EmployeeDao {
 	Employee findById(int id);
 
 	Employee findByName(String name);
+
+	List<Employee> sortBySalary();
+
+	List<Employee> sortByName();
 }

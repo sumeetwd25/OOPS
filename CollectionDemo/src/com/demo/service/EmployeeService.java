@@ -11,4 +11,8 @@ public interface EmployeeService {
 	Employee searchById(int id);
 
 	Employee searchByName(String name);
+
+	List<Employee> sortBySal();
+
+	List<Employee> sortByName();
 }

@@ -1,13 +1,15 @@
 package com.demo.beans;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	private int eid;
 	private String ename;
 	private String desg;
 	private int sal;
+	
 	public Employee() {
 		super();
 	}
+	
 	public Employee(int eid, String ename, String desg, int sal) {
 		super();
 		this.eid = eid;
@@ -15,22 +17,6 @@ public class Employee {
 		this.desg = desg;
 		this.sal = sal;
 	}
-
-//	public Employee(int eid) {
-//		super();
-//		this.eid = eid;
-//		this.ename = null;
-//		this.desg = null;
-//		this.sal = 0;
-//	}
-
-//	public Employee(String ename) {
-//		super();
-//		this.eid = 0;
-//		this.ename = ename;
-//		this.desg = null;
-//		this.sal = 0;	
-//	}
 	
 	public int getEid() {
 		return eid;
@@ -56,9 +42,15 @@ public class Employee {
 	public void setSal(int sal) {
 		this.sal = sal;
 	}
+	
 	@Override
 	public String toString() {
 		return "Employee [eid=" + eid + ", ename=" + ename + ", desg=" + desg + ", sal=" + sal + "]";
+	}
+	
+	public int compareTo(Employee o) {
+		return this.sal-o.sal;
+		
 	}
 	
 }
