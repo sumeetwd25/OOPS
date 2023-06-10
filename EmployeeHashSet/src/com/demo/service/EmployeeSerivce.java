@@ -15,6 +15,12 @@ public interface EmployeeSerivce {
 	Employee displayByName(String name);
 
 	Set<Employee> sortByName();
+
+	Set<Employee> sortBySal();
+
+	boolean modifySal(int id, int newsal);
+
+	boolean deleteById(int id);
 	
 	
 }

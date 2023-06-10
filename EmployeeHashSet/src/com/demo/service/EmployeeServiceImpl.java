@@ -48,4 +48,19 @@ public class EmployeeServiceImpl implements EmployeeSerivce {
 		return edao.sortByName();
 	}
 
+	@Override
+	public Set<Employee> sortBySal() {
+		return edao.sortBySalary();
+	}
+
+	@Override
+	public boolean modifySal(int id, int newsal) {
+		return edao.modifySalary(id,newsal);
+	}
+
+	@Override
+	public boolean deleteById(int id) {
+		return edao.removeById(id);
+	}
+
 }

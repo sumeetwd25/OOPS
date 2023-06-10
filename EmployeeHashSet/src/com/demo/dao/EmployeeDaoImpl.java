@@ -47,16 +47,52 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public Set<Employee> sortByName() {
-		
-		Comparator<Employee> c = (o1,o2)->{
+
+		Comparator<Employee> c = (o1, o2) -> {
 			return o1.getEname().compareTo(o2.getEname());
 		};
-		
+
 		Set<Employee> tset = new TreeSet<>(c);
 		for (Employee ob : s) {
 			tset.add(ob);
 		}
 		return tset;
+	}
+
+	@Override
+	public Set<Employee> sortBySalary() {
+
+		Comparator<Employee> c = (o1, o2) -> {
+			return o1.getSal() - o2.getSal();
+		};
+
+		Set<Employee> tset = new TreeSet<>(c);
+		for (Employee ob : s) {
+			tset.add(ob);
+		}
+		return tset;
+	}
+
+	@Override
+	public boolean modifySalary(int id, int newsal) {
+		for (Employee ob : s) {
+			if (ob.getEid() == id) {
+				ob.setSal(newsal);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public boolean removeById(int id) {
+		for (Employee ob : s) {
+			if (ob.getEid() == id) {
+				s.remove(ob);
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

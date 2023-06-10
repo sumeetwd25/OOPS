@@ -16,4 +16,10 @@ public interface EmployeeDao {
 
 	Set<Employee> sortByName();
 
+	Set<Employee> sortBySalary();
+
+	boolean modifySalary(int id, int newsal);
+
+	boolean removeById(int id);
+
 }
