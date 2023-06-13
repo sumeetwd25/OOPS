@@ -15,9 +15,9 @@ public class TestAppendFile {
 		//create new test file or do not create if already exists.
 		try {
 			if (!f.exists()) {
-				fos = new FileOutputStream("test.txt");
+				fos = new FileOutputStream("testcopy.txt");
 			} else {
-				fos = new FileOutputStream("test.txt", true);
+				fos = new FileOutputStream("testcopy.txt", true);
 			}
 		} 
 		catch (FileNotFoundException e) {
